@@ -1,0 +1,51 @@
+<%= form_with(model: user, local: true) do |form| %>
+  <% if user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label "Edad" %>
+    <%= form.text_field :age, id: :user_age, :autocomplete => :off %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Estado de ánimo" %>
+    <%= form.select :mood, options_for_select([['Muy Feliz', 'Muy feliz'], ['Feliz', 'Feliz'], ['Normal', 'Normal'], ['Triste', 'Triste'], ['Muy Triste', 'Muy triste']],  params[:mood]) %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Gustos" %>
+    <%= render "select-gustos" %>
+    <%= form.text_field :liking, id: :user_liking, style: "display:none;" %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Género" %>
+    <%= form.select :gender, options_for_select([['Masculino', 'Hombre'], ['Femenino', 'Mujer'], ['Otro', 'Otro']],  params[:gender]) %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Ocupación" %>
+    <%= render "select-ocupacion" %>
+    <%= form.text_field :ocupation, id: :user_ocupation, style: "display: none;" %>
+  </div>
+
+  <div class="field">
+    <%= form.label "Estado físico" %>
+    <%= form.select :physhic, options_for_select([['Somnolencia', 'Somnolencia'], ['Resaca', 'Resaca'], ['Enfermedad', 'Enfermedad'], ['Ejercicio', 'Ejercicio']],  params[:physhic]) %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Enviar", class: "btn-rounded g-margin-big"  %>
+  </div>
+<% end %>
+
+<%= javascript_include_tag "materialize/materialize" %>

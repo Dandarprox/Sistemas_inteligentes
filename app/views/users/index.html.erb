@@ -1,0 +1,41 @@
+<div class="container">
+    <p id="notice"><%= notice %></p>
+
+    <h3>Usuarios</h3>
+
+    <table class="vertical">
+      <thead>
+        <tr>
+          <th>Edad</th>
+          <th>Estado de ánimo</th>
+          <th>Gustos</th>
+          <th>Género</th>
+          <th>Ocupación</th>
+          <th>Estado físico</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @users.each do |user| %>
+          <tr>
+            <td><%= user.age %></td>
+            <td><%= user.mood %></td>
+            <td><%= user.liking %></td>
+            <td><%= user.gender %></td>
+            <td><%= user.ocupation %></td>
+            <td><%= user.physhic %></td>
+            <td><%= link_to 'Ver', user, class: "btn-rounded font_semi-bold" %></td>
+            <!-- <td><%= link_to 'Edit', edit_user_path(user), class: "btn-rounded" %></td> -->
+            <td><%= link_to 'Eliminar', user, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn-rounded font_semi-bold" %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+    <br>
+
+    <%= link_to 'Nuevo', new_user_path, class: "btn-gradient" %>
+    <%= link_to 'Generar Excel', users_path(:format => :csv), class: "btn-gradient" %>
+
+</div>

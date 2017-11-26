@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Emotion</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'fonts' %>
+    <%= favicon_link_tag 'brainCloud.png' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+</head>
+    <body>
+        <%= render "layouts/menu" %>
+        <div class="spacer"></div>
+        <%= yield %>
+    </body>
+</html>

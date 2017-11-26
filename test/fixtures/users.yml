@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  age: 1
+  mood: MyString
+  liking: MyString
+  gender: MyString
+  ocupation: MyString
+  physhic: MyString
+
+two:
+  age: 1
+  mood: MyString
+  liking: MyString
+  gender: MyString
+  ocupation: MyString
+  physhic: MyString

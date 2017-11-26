@@ -1,0 +1,169 @@
+$base: #25263B
+
+@mixin border-radius($r1, $r2, $r3, $r4)
+    -webkit-border-radius: $r1 $r2 $r3 $r4
+    -moz-border-radius: $r1 $r2 $r3 $r4
+    -ms-border-radius: $r1 $r2 $r3 $r4
+    border-radius: $r1 $r2 $r3 $r4
+
+body, html
+    padding: 0 !important
+    margin: 0 !important
+
+.btn-classic
+    background-color: #458cd9
+    border: 0px
+    border-radius: 3px
+    padding: 13px 20px
+    color: white
+    text-transform: uppercase
+    // box-shadow: 1px 3px 15px rgba(#c8c8c8, 0.70)
+
+    &:hover
+        background-color: #649ddb
+        cursor: pointer
+
+
+.btn-rounded
+    background-color: #458cd9
+    padding: 7px 18px
+    color: white
+    text-transform: uppercase
+    border-radius: 30px
+    display: inline-block
+    font-family: 'proxima_nova_ltsemibold'
+    font-size: 14px
+
+    &:hover
+        background-color: #649ddb
+        cursor: pointer
+
+.g-margin
+    margin: 5px
+
+.g-margin-big
+    margin: 0 0 30px 0
+
+.float-left
+    float: left
+
+.float-right
+    float: right
+
+.spacer
+    display: block
+    height: 45px
+
+li
+    span
+        color: white !important
+
+
+body
+    height: 100vh
+    font-family: 'Proxima Nova', Times, sans-serif
+    background-color: #25263B
+    color: white
+
+
+table.vertical
+    tr:last-child
+        td:first-child
+            @include border-radius(0px, 0px, 0px, 7px)
+        td:last-child
+            @include border-radius(0px, 0px, 7px, 0px)
+
+    tr:first-child
+        th:first-child
+            @include border-radius(7px, 0px, 0px, 0px)
+        th:last-child
+            @include border-radius(0px, 7px, 0px, 0px)
+
+
+    tr:nth-child(even)
+        background-color: #333d50
+
+    tr:nth-child(odd)
+        background-color: #2c3446
+
+    th
+        color: #c5c8db
+        font-weight: bold
+        padding-left: 25px
+        text-shadow: 1px 1px 3px #111111
+    td
+        color: white
+        padding-left: 15px
+
+table
+    margin-bottom: 20px
+
+table.horizontal
+
+    tr:last-child
+        th
+            @include border-radius(0px, 0px, 0px, 7px)
+        td
+            @include border-radius(0px, 0px, 7px, 0px)
+
+    tr:first-child
+        th
+            border-radius: 7px 0px 0px 0px
+        td
+            border-radius: 0px 7px 0px 0px
+
+    th
+        width: 20%
+        color: #c5c8db
+        font-weight: bold
+        padding-left: 25px
+        text-shadow: 1px 1px 3px #111111
+    td
+        color: white
+        border-left: 1px solid #1f2839
+        padding-left: 15px
+
+    tr:not(:last-child)
+        border-bottom: 1px solid #1f2839
+
+    tr:nth-child(even)
+        background-color: #333d50
+
+    tr:nth-child(odd)
+        background-color: #2c3446
+
+    tr:hover
+        td, th
+            background-color: #5f6a87
+
+
+
+h1, h2, h3, h4, h5, h6
+    color: #f1f1f1
+    font-family: 'proxima_nova_altbold', Consolas, sans-serif !important
+
+
+.btn-gradient
+    background: linear-gradient(90deg, #533CB0, #AE6FCB 100%) no-repeat
+    @include border-radius(3px, 3px, 3px, 3px)
+    padding: 13px 25px
+    color: white
+    font-family: "proxima_nova_ltsemibold"
+    font-size: 14px
+    box-shadow: 0 0 15px rgba(#533cb0, 0.7)
+
+    &:hover
+        box-shadow: 0 0 15px rgba(#b4a6ed, 0.6)
+
+
+
+.toast_color
+    background-color: #17964e
+
+
+#notice
+    color: #659379
+    border-radius: 3px
+    padding: 3px 10px
+    display: inline-block
+    font-family: 'proxima_nova_ltsemibold'

@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="spacer"></div>
+    <table class="horizontal">
+        <tr>
+            <th>Edad</th>
+            <td><%= @user.age %></td>
+        </tr>
+        <tr>
+            <th>Estado de ánimo</th>
+            <td><%= @user.mood %></td>
+        </tr>
+        <tr>
+            <th>Gustos</th>
+            <td><%= @user.liking %></td>
+        </tr>
+        <tr>
+            <th>Género</th>
+            <td><%= @user.gender %></td>
+        </tr>
+        <tr>
+            <th>Ocupación</th>
+            <td><%= @user.ocupation %></td>
+        </tr>
+        <tr>
+            <th>Estado físico</th>
+            <td><%= @user.physhic %></td>
+        </tr>
+    </table>
+
+    <%= link_to 'Editar', edit_user_path(@user), class: "btn-gradient g-margin" %>
+    <%= link_to 'Volver', users_path, class: "btn-gradient g-margin" %>
+
+</div>

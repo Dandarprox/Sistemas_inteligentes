@@ -1,0 +1,9 @@
+<%= javascript_include_tag "process/input" %>
+<div class="container">
+    <h4>Usuario nuevo</h4>
+
+    <%= render 'form', user: @user %>
+
+    <%= link_to 'Back', users_path, class: "btn-gradient"  %>
+    <div class="spacer"></div>
+</div>

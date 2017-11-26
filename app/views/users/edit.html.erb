@@ -1,0 +1,11 @@
+<%= javascript_include_tag "process/input" %>
+<div class="container">
+    <h1>Editing User</h1>
+
+    <%= render 'form', user: @user %>
+
+    <%= link_to 'Show', @user, class: "btn-gradient g-margin"  %>
+    <%= link_to 'Back', users_path, class: "btn-gradient g-margin" %>
+    <div class="spacer"></div>
+
+</div>
