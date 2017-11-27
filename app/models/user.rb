@@ -220,8 +220,8 @@ end
 class User < ApplicationRecord
 
     def self.to_csv
-        attributes = %w{age mood liking gender ocupation physhic}
-        titles = %w{Edad Animo Gustos Genero Ocupacion Fisico}
+        attributes = %w{created_at age mood liking gender ocupation physhic}
+        titles = %w{Fecha Edad Animo Gustos Genero Ocupacion Fisico}
 
         CSV.generate(headers: true) do |csv|
             csv << titles
