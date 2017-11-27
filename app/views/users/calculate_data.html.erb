@@ -1,0 +1,57 @@
+<div class="container">
+    <h1>Generación de datos</h1>
+    <div class="row">
+        <div class="col s2">
+            <h4>Clusters</h4>
+            <table class="horizontal">
+                <% @cluster.each do |key, val|%>
+                    <tr>
+                        <th><%= key %></th>
+                        <td><%= val %></td>
+                    </tr>
+                <% end %>
+            </table>
+        </div>
+
+        <div class="col 7 offset-s2">
+            <h4>Usuarios nuevos</h4>
+
+            <% @new_user.each do | user | %>
+                <table class="horizontal">
+                    <tr>
+                        <th>Edad</th>
+                        <td><%= user.edad %></td>
+                    </tr>
+                    <tr>
+                        <th>Ánimo</th>
+                        <td><%= user.animo %></td>
+                    </tr>
+                    <tr>
+                        <th>Gustos</th>
+                        <td><%= user.gustos %></td>
+                    </tr>
+                    <tr>
+                        <th>Género</th>
+                        <td><%= user.genero %></td>
+                    </tr>
+                    <tr>
+                        <th>Ocupación</th>
+                        <td><%= user.ocupacion %></td>
+                    </tr>
+                    <tr>
+                        <th>Físico</th>
+                        <td><%= user.fisico %></td>
+                    </tr>
+                    <tr>
+                        <th>Sueño</th>
+                        <td><%= user.sleep.to_s %></td>
+                    </tr>
+                    <tr>
+                        <th>Cluster</th>
+                        <td><%= user.cluster %></td>
+                    </tr>
+                </table>
+            <% end %>
+        </div>
+    </div>
+</div>

@@ -13,6 +13,15 @@ class UsersController < ApplicationController
 
   end
 
+  def calculate_data
+    @new_user, @cluster = User.generate_results
+    @new_user.each do | u |
+        u.to_String()
+    end
+
+    puts @cluster
+  end
+
   # GET /users/1
   # GET /users/1.json
   def show
